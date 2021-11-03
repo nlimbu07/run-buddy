@@ -17,4 +17,4 @@ https://lernantino.github.io/run-buddy/
 
 Made with ❤️ by Niraj Limbu
 
-# Run Buddy Inc.
+### ©️2019 Run Buddy, Inc
