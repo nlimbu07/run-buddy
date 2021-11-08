@@ -17,13 +17,21 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 header h1 {
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
-    margin: 0;    
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    
 }
 
 header a {
@@ -48,9 +56,17 @@ header nav ul {
 }
 
 header nav ul li a {
-    padding: 10 15px;
+    padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 footer {
@@ -85,11 +101,12 @@ section {
 .hero {
     background-image: url(../images/hero-bg.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 80%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;  
+    background-attachment: fixed;
 }
 /* Hero Style End */
 .hero-cta {
@@ -105,6 +122,7 @@ line-height: 1.2;
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form {
@@ -114,6 +132,8 @@ line-height: 1.2;
     padding: 20px;
     border: 3px solid #024e76;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .hero-form p {
@@ -137,6 +157,13 @@ line-height: 1.2;
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
 .hero-form label {
@@ -149,7 +176,14 @@ line-height: 1.2;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
 }
+
+.hero-form button:hover {
+    background-color: #39a6b2;
+}
+
+
 /* HERO STYLES END */
 
 .intro h2 {     
@@ -193,12 +227,25 @@ line-height: 1.2;
 .step {
     margin: 50px auto;
     padding-bottom: 50px;
-    width: 80%;
-    border-bottom: 1px solid #39a6b2;
+    width: 80%;    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #39a6b2;
+}
+
+.step:last-child {
+    border-bottom: none;
+}
+
+/*We could combine :last-child with another pseudo-class*/
+/* .step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
+} */
+
+.step:nth-child(even) {
+    border-bottom: 1px solid #39a6b2;
 }
 
 .step h3 {
@@ -336,6 +383,13 @@ line-height: 1.2;
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-form input, .contact-form:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
 .contact-form button {
@@ -346,6 +400,12 @@ line-height: 1.2;
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
 }
 
 /* REACH OUT STYLES END */
@@ -355,6 +415,7 @@ line-height: 1.2;
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
 
     header h1 {
